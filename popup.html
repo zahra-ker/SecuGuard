@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SecuGuard - Protection Anti-Phishing</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <img src="icons/icon48.png" alt="SecuGuard Logo">
+        <h1>SecuGuard</h1>
+      </div>
+      <p class="tagline">Protection contre le phishing et les sites malveillants</p>
+    </header>
+    
+    <div class="security-status">
+      <div class="status-icon">
+        <!-- l'icône sera définie dynamiquement dans le JS -->
+        <div id="statusIcon"></div>
+      </div>
+      <div class="status-details">
+        <h2 id="statusTitle">Analyse en cours...</h2>
+        <div class="safety-meter">
+          <div class="safety-bar">
+            <div id="safetyIndicator" class="safety-indicator"></div>
+          </div>
+          <span id="safetyScore">--</span>
+        </div>
+        <p id="statusMessage">Évaluation de la sécurité du site...</p>
+      </div>
+    </div>
+    
+    <div id="riskDetails" class="risk-details">
+      <h3>Problèmes détectés</h3>
+      <ul id="risksList">
+        <!-- la liste des risques sera générée dynamiquement -->
+      </ul>
+    </div>
+    
+    <div class="actions">
+      <button id="whitelistBtn" class="btn">Ajouter à la liste blanche</button>
+      <button id="reportBtn" class="btn secondary">Signaler un faux positif</button>
+    </div>
+    
+    <div class="settings-panel">
+      <h3>Paramètres</h3>
+      <div class="setting-item">
+        <label for="phishingDetection">
+          <input type="checkbox" id="phishingDetection" checked>
+          Détection de phishing
+        </label>
+      </div>
+      <div class="setting-item">
+        <label for="malwareDetection">
+          <input type="checkbox" id="malwareDetection" checked>
+          Détection de malware
+        </label>
+      </div>
+      <div class="setting-item">
+        <label for="notificationLevel">Niveau de notification:</label>
+        <select id="notificationLevel">
+          <option value="all">Tous les risques</option>
+          <option value="medium+">Risques moyens et élevés</option>
+          <option value="high+">Risques élevés uniquement</option>
+        </select>
+      </div>
+    </div>
+    
+    <div class="whitelist-panel">
+      <h3>Sites de confiance</h3>
+      <div class="whitelist-container">
+        <ul id="whitelistItems">
+          <!-- la liste des sites de confiance sera générée dynamiquement -->
+        </ul>
+      </div>
+    </div>
+    
+    <footer>
+      <p>Attention, il s'agit purement d'un projet personnel qui n'a pas été réalisé pour une utilisation réelle</p>
+      <p class="version">Version 1.0.0</p>
+    </footer>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>

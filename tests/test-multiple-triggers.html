@@ -1,0 +1,18 @@
+<!-- test-multiple-triggers.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vérification de compte bancaire</title>
+    <meta http-equiv="refresh" content="100;url=https://autre-site.com">
+</head>
+<body>
+    <h1>Mise à jour de sécurité requise</h1>
+    <p>Des activités inhabituelles ont été détectées sur votre compte.</p>
+    <iframe src="about:blank" style="width:1px;height:1px;opacity:0"></iframe>
+    <form action="https://example.com/login?redirect=http://site-suspect.com">
+        <input type="text" name="cardnumber" placeholder="Numéro de carte">
+        <input type="password" name="cvv" placeholder="CVV">
+        <button>Confirmer votre identité</button>
+    </form>
+</body>
+</html>
